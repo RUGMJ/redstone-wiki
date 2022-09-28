@@ -1,0 +1,15 @@
+---
+import icon from '/Icon.svg';
+import Search from './Search';
+const pages = (await Astro.glob('../pages/*.mdx')).filter(
+	page => !page.frontmatter.draft,
+);
+---
+
+<header>
+	<a href='/' class='favicon'>
+		<img src={icon} alt='Icon' />
+	</a>
+
+	<Search client:idle pages={pages} />
+</header>

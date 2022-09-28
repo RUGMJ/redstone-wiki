@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Fira Code", monospace !important;
+}
+
+h1 {
+    font-size: 15rem;
+}
+
+p {
+    font-size: 2.5rem;
+}

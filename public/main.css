@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    cursor: default;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: black;
+}
+
+main {
+    margin: 1%;
+    background: rgb(26, 26, 27);
+    min-height: 100vh;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    cursor: pointer;
+    color: rgb(105, 105, 245);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.favicon>img {
+    width: 100%;
+    border-radius: 10000000000000000px;
+    cursor: pointer;
+}
+
+.favicon {
+    display: block;
+    width: 10em;
+}
+
+header {
+    background: rgb(26, 26, 27);
+    margin: 1%;
+    padding: 1.5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.nav-search>input {
+    background: rgb(53, 53, 53);
+    border: none;
+    border-radius: 10px;
+    padding-block: 2vh;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+}
+
+.nav-search-results {
+
+    position: absolute;
+    width: 100%;
+    top: 5em;
+    display: none;
+
+    max-height: 50vh;
+
+    overflow-y: scroll;
+
+}
+
+.nav-search>input:focus+.nav-search-results,
+.nav-search-results:hover {
+    display: block;
+}
+
+.nav-search {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    position: relative;
+}
+
+.nav-search-result {
+    background: rgb(53, 53, 53);
+    padding: 3%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.description {
+    color: rgb(182, 182, 182);
+}
+
+::selection {
+    background: rgb(234, 84, 85, 0.5);
+}
+
+footer {
+    background: rgb(26, 26, 27);
+    margin: 1%;
+    padding: 1.5%;
+    border-radius: 10px;
+}
+
+footer>.source-button {
+    float: right;
+}
+
+footer>.source-button>* {
+    vertical-align: bottom;
+
+}

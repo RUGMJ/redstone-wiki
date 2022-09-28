@@ -1,0 +1,43 @@
+---
+import Head from './components/Head.astro';
+import Header from './components/Header.astro';
+import '../public/main.css';
+
+// @ts-ignore
+import GitHubLogo from '@astropub/icons/GitHubLogo';
+
+const { frontmatter } = Astro.props;
+
+const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' });
+const date = new Date(frontmatter.timestamp * 1000);
+
+interface Author {
+	name: string;
+	url: string;
+}
+---
+
+<html>
+	<Head />
+	<body>
+		<Header />
+		<main>
+			<h1>{frontmatter.title}</h1>
+			<slot />
+		</main>
+		<footer>
+			this page was created on the {dateFormatter.format(date)} by {
+				frontmatter.authors.map((author: Author) => (
+					<a target='_blank' href={author.url}>
+						{author.name}
+					</a>
+				))
+			}
+			<a
+				class='source-button'
+				href={`https://github.com/rugmj/redstone-wiki/src/pages${frontmatter.url}`}
+				>View Source <GitHubLogo size='30' title='Github Icon' />
+			</a>
+		</footer>
+	</body>
+</html>
