@@ -21,3 +21,7 @@ h2 {
 main>* {
     margin-bottom: 1%;
 }
+
+li {
+    list-style: none;
+}

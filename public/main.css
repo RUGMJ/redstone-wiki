@@ -30,6 +30,7 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -72,7 +73,8 @@ header {
     display: inline-block;
     text-align: center;
     font-size: 1rem;
-    outline: none;
+    /* outline: none; */
+    outline-color: rgb(234, 84, 85, 0.5);
 }
 
 .nav-search-results {
@@ -129,4 +131,72 @@ footer>.source-button {
 footer>.source-button>* {
     vertical-align: bottom;
 
+}
+
+main>* {
+    margin-block: 0.5%;
+}
+
+blockquote {
+    background: rgba(0, 0, 0, 0.274);
+    border-left: 3px solid grey;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+main>ul {
+    list-style: disc;
+
+}
+
+main>ol {
+    list-style: decimal;
+}
+
+.download {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 1%;
+    border-radius: 10px;
+    transition: padding 0.25s ease-in-out;
+}
+
+.download:hover {
+    padding: 2%;
+}
+
+.download>.description {
+    font-size: 0.75rem;
+}
+
+.download>a>* {
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+
+table {
+    border: 2px white solid;
+    padding: 0.5%;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .favicon {
+        display: none;
+    }
+
+    .nav-search {
+        margin: auto;
+    }
+
+}
+
+.astro-code {
+    padding: 1%;
+    border-radius: 10px;
 }

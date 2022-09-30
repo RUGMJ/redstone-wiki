@@ -1,0 +1,20 @@
+---
+import Timestamp from '../components/Timestamp';
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import '../../public/main.css';
+import '../../public/timestamp.css';
+---
+
+<html>
+	<Head title={'Timestamp'} />
+	<body>
+		<Header />
+		<main>
+			<h1>Timestamp</h1>
+			<span>
+				<Timestamp client:load />
+			</span>
+		</main>
+	</body>
+</html>

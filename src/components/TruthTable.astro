@@ -1,0 +1,21 @@
+---
+const { data, headers } = Astro.props;
+---
+
+<table>
+	<tr>
+		{headers.map((header: string) => <th>{header}</th>)}
+	</tr>
+
+	{
+		data.map((row: number[]) => (
+			<tr>
+				{row.map(cell => (
+					<td>{cell}</td>
+				))}
+			</tr>
+		))
+	}
+
+
+</table>

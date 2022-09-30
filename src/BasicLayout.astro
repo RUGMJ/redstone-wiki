@@ -18,7 +18,7 @@ interface Author {
 ---
 
 <html>
-	<Head />
+	<Head title={frontmatter.title} />
 	<body>
 		<Header />
 		<main>
@@ -35,7 +35,8 @@ interface Author {
 			}
 			<a
 				class='source-button'
-				href={`https://github.com/rugmj/redstone-wiki/src/pages${frontmatter.url}`}
+				href={`https://github.com/RUGMJ/redstone-wiki/blob/master/src/pages${frontmatter.url}.mdx?plain=1`}
+				target='_blank'
 				>View Source <GitHubLogo size='30' title='Github Icon' />
 			</a>
 		</footer>
