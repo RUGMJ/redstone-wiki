@@ -22,4 +22,24 @@ import TruthTable from '../components/TruthTable.astro';
 
 {/* Add your writing below here! */}
 
+A download button for the `foo.bar` file:
+
 <Download url={`/assets/${frontmatter.id}/foo.bar`} display_name={'Foo'} />
+
+A TruthTable for an `AND gate`:
+
+<TruthTable
+	headers={['A', 'B', 'OUT']}
+	data={[
+		[0, 0, 0],
+		[0, 1, 0],
+		[1, 0, 0],
+		[1, 1, 1],
+	]}
+/>
+
+An example piece of `python code` with [Shiki](https://github.com/shikijs/shiki)
+
+```py
+print("Hello World")
+```
