@@ -30,6 +30,7 @@ interface Author {
 				frontmatter.authors.map((author: Author, i: number) => (
 					<a target='_blank' href={author.url}>
 						{author.name}
+						{frontmatter.authors.length !== i + 1 ? <span>, </span> : false}
 					</a>
 				))
 			}
