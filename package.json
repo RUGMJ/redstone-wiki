@@ -7,7 +7,7 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "astro preview",
+		"preview": "wrangler pages dev ./dist",
 		"astro": "astro"
 	},
 	"dependencies": {
@@ -22,11 +22,13 @@
 		"react-dom": "^18.2.0",
 		"remark-emoji": "^3.0.2",
 		"rollup": "^2.79.1",
-		"sass": "^1.55.0"
+		"sass": "^1.55.0",
+		"web-streams-polyfill": "^3.2.1"
 	},
 	"devDependencies": {
 		"@types/node": "^18.7.22",
 		"@types/react": "^18.0.21",
-		"@types/three": "^0.144.0"
+		"@types/three": "^0.144.0",
+		"wrangler": "^2.1.9"
 	}
 }

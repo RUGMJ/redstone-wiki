@@ -1,3 +1,4 @@
+import 'web-streams-polyfill/es2018';
 import { useState } from 'react';
 
 export default function Timestamp() {

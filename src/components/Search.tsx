@@ -1,3 +1,4 @@
+import 'web-streams-polyfill/es2018';
 import type { MDXInstance } from 'astro';
 import { useState } from 'react';
 
