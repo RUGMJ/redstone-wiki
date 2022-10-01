@@ -2,10 +2,11 @@
 const { url, display_name } = Astro.props;
 // @ts-ignore
 import Download from '@astropub/icons/Download';
+import path from 'path';
 ---
 
 <div class='download'>
-	<a href={url}>
+	<a href={url} download={display_name + path.extname(url)}>
 		{display_name}
 		<Download size={'25'} fill={'rgb(105, 105, 245)'} />
 	</a>

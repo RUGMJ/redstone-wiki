@@ -1,6 +1,7 @@
 ---
 # Edit these values
 title: Example
+id: example
 description: An example page.
 timestamp: 1664217620
 authors: # Make sure the most recent editor is at the top (You!)
@@ -12,7 +13,7 @@ authors: # Make sure the most recent editor is at the top (You!)
 # Leave stuff below as is
 category: Misc
 new: true
-draft: true
+draft: false
 layout: ../BasicLayout.astro
 ---
 
@@ -20,3 +21,5 @@ import Download from '../components/Download.astro';
 import TruthTable from '../components/TruthTable.astro';
 
 {/* Add your writing below here! */}
+
+<Download url={`/assets/${frontmatter.id}/foo.bar`} display_name={'Foo'} />
