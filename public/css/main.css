@@ -39,10 +39,6 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-}
-
 .favicon>img {
     width: 100%;
     border-radius: 10000000000000000px;
