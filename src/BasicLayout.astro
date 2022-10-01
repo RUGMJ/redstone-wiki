@@ -3,7 +3,7 @@ import Head from './components/Head.astro';
 import Header from './components/Header.astro';
 
 // @ts-ignore
-import GitHubLogo from '@astropub/icons/GitHubLogo';
+// import GitHubLogo from '@astropub/icons/GitHubLogo';
 
 const { frontmatter } = Astro.props;
 
@@ -38,7 +38,8 @@ interface Author {
 				class='source-button'
 				href={`https://github.com/RUGMJ/redstone-wiki/blob/master/src/pages${frontmatter.url}.mdx?plain=1`}
 				target='_blank'
-				>View Source <GitHubLogo size='30' title='Github Icon' />
+				>View Source
+				<!-- <GitHubLogo size='30' title='Github Icon' /> -->
 			</a>
 		</footer>
 	</body>
