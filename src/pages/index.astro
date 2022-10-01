@@ -1,7 +1,7 @@
 ---
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
-import '../../public/css/home.css';
+import '../../public/scss/home.scss';
 
 // It's getting all the pages in the pages folder and filtering out the ones that have draft set to true in the frontmatter
 const pages = (await Astro.glob('../pages/*.mdx')).filter(
