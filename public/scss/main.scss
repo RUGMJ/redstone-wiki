@@ -1,0 +1,224 @@
+:root {
+    // Variables
+    --text-colour: white;
+    --background: black;
+    --foreground: #1a1a1a;
+    --link-colour: #7070f5;
+    --accent-colour: #ea5455;
+    --transition-speed: 0.25s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-colour);
+    cursor: default;
+}
+
+// Main element styling
+
+html {
+    // Hide Scrollbar
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+
+    main,
+    header,
+    footer {
+        background: var(--foreground);
+
+        margin: 1%;
+        padding: 1%;
+        margin-bottom: 3%;
+
+        border-radius: 10px;
+
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: 100vh; // Make the main element take up the whole page
+
+        width: 75vw;
+        align-self: center; // Centers the element on the horizontal axis
+
+        * {
+            margin-block: 0.5%;
+        }
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer {
+        .source-button {
+            float: right;
+
+            * {
+                vertical-align: bottom;
+            }
+        }
+
+        margin-bottom: 1%;
+    }
+}
+
+a {
+    cursor: pointer;
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+blockquote {
+    background: var(--background);
+    border-left: 3px solid var(--text-colour);
+    padding: 1%;
+    border-radius: 10px;
+}
+
+table {
+    border: 2px var(--text-colour) solid;
+    padding: 0.5%;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+}
+
+.astro-code {
+    padding: 1%;
+    border-radius: 10px;
+}
+
+code {
+    font-family: "Fira Code", monospace;
+}
+
+hr {
+    width: 100%;
+}
+
+ul,
+ol {
+    padding-inline-start: 40px;
+}
+
+.favicon {
+    display: block;
+    width: 10em;
+
+    img {
+        width: 100%;
+        border-radius: 10000000000000000px; // Makes the img circular
+        cursor: pointer;
+    }
+}
+
+// Components
+
+.download {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
+
+    width: fit-content;
+
+    padding: 1%;
+
+    border-radius: 10px;
+
+    transition: padding var(--transition-speed) ease-in-out;
+
+    &:hover {
+        padding: 1.5%;
+    }
+
+    .description {
+        font-size: 0.75rem;
+    }
+
+    a {
+        * {
+            cursor: pointer;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.nav-search {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+        background: var(--background);
+        border: none;
+        border-radius: 10px;
+        padding-block: 2vh;
+        display: inline-block;
+        text-align: center;
+
+        outline: var(--accent-colour);
+    }
+
+    .nav-search-results {
+        position: absolute;
+        width: 100%;
+        top: 5em;
+        display: none;
+
+        max-height: 50vh;
+
+        overflow-y: scroll;
+
+        list-style: none;
+
+        .nav-search-result {
+            background: var(--background);
+            padding: 3%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            border: var(--text-colour) 2px solid;
+        }
+    }
+
+
+    input:focus+.nav-search-results,
+    .nav-search-results:hover {
+        display: block;
+    }
+}
+
+// Media
+
+@media screen and (max-width: 500px) {
+
+    .favicon {
+        display: none;
+    }
+
+    .nav-search {
+        margin: auto;
+    }
+
+}

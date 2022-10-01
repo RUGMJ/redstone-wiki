@@ -1,7 +1,7 @@
 ---
 import Head from './components/Head.astro';
 import Header from './components/Header.astro';
-import '../public/css/main.css';
+import '../public/scss/main.scss';
 
 // @ts-ignore
 import GitHubLogo from '@astropub/icons/GitHubLogo';
@@ -27,7 +27,7 @@ interface Author {
 		</main>
 		<footer>
 			this page was created on the {dateFormatter.format(date)} by {
-				frontmatter.authors.map((author: Author) => (
+				frontmatter.authors.map((author: Author, i: number) => (
 					<a target='_blank' href={author.url}>
 						{author.name}
 					</a>
