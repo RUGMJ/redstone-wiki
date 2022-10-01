@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@astrojs/cloudflare': ^2.1.0
   '@astrojs/mdx': ^0.11.1
   '@astrojs/react': ^1.1.4
   '@astropub/icons': ^0.2.0
@@ -12,10 +13,12 @@ specifiers:
   prismarine-viewer: ^1.23.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  remark-emoji: ^3.0.2
   rollup: ^2.79.1
   sass: ^1.55.0
 
 dependencies:
+  '@astrojs/cloudflare': 2.1.0
   '@astrojs/mdx': 0.11.1_rollup@2.79.1
   '@astrojs/react': 1.1.4_biqbaboplfbrettd7655fr4n2y
   '@astropub/icons': 0.2.0_astro@1.3.0
@@ -24,6 +27,7 @@ dependencies:
   prismarine-viewer: 1.23.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  remark-emoji: 3.0.2
   rollup: 2.79.1
   sass: 1.55.0
 
@@ -40,6 +44,12 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.15
+    dev: false
+
+  /@astrojs/cloudflare/2.1.0:
+    resolution: {integrity: sha512-PZS5QmJ87YR+d9demsSIcxagoB1UM5/sFrDG3AKHPPz24eDSmSI10dnHLIhsl+5F0iEuFttFPuXoTRTMsrAzUQ==}
+    dependencies:
+      esbuild: 0.14.54
     dev: false
 
   /@astrojs/compiler/0.23.5:
@@ -1349,6 +1359,10 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: false
 
+  /emoticon/4.0.1:
+    resolution: {integrity: sha512-dqx7eA9YaqyvYtUhJwT4rC1HIp82j5ybS1/vQ42ur+jBe17dJMwZE4+gvL1XadSFfxaPFFGt3Xsw+Y8akThDlw==}
+    dev: false
+
   /encodeurl/1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
@@ -2536,6 +2550,10 @@ packages:
     resolution: {integrity: sha512-6raRe2vxCYBhpBu+B+TtNGUzah+hQjVdu3E17wfusjyrXBka2nBS8OH/gjVZ5PvHOhWmIZTYri09Z6n/QfnNMw==}
     dev: false
 
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /log-symbols/5.1.0:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
     engines: {node: '>=12'}
@@ -3253,6 +3271,12 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: false
 
+  /node-emoji/1.11.0:
+    resolution: {integrity: sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==}
+    dependencies:
+      lodash: 4.17.21
+    dev: false
+
   /node-fetch/3.2.10:
     resolution: {integrity: sha512-MhuzNwdURnZ1Cp4XTazr69K0BTizsBroX7Zx3UgDSVcZYKF/6p0CBe4EUb/hLqmzVhl0UpYfgRljQ4yxE+iCxA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3771,6 +3795,15 @@ packages:
       rehype-parse: 8.0.4
       rehype-stringify: 9.0.3
       unified: 10.1.2
+    dev: false
+
+  /remark-emoji/3.0.2:
+    resolution: {integrity: sha512-hEgxEv2sBtvhT3tNG/tQeeFY3EbslftaOoG14dDZndLo25fWJ6Fbg4ukFbIotOWWrfXyASjXjyHT+6n366k3mg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      emoticon: 4.0.1
+      node-emoji: 1.11.0
+      unist-util-visit: 4.1.1
     dev: false
 
   /remark-frontmatter/4.0.1:
