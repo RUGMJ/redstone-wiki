@@ -26,17 +26,18 @@ pages.forEach(page => {
 		<Header />
 		<main>
 			<h1>The <span class="redstone">Redstone</span> Wiki</h1>
-			<p>Welcome to the <span class="redstone">redstone</span> wiki, here you can find all sorts of <span class="redstone" >guides, informational pages and project ideas</span> all in one place</p>
-			<p>I'm not the most knowledgeable in redstone which is why I designed this website <span class="redstone">with writers in mind</span>, you get easy writing with neat components for you to use, <br />need to supply a download? Dont use a ugly link, use the download component to make a neat looking download button <a href="/writing">view this page for more info</a></p>
+			<p class="welcome">Welcome to the <span class="redstone">redstone</span> wiki, here you can find all sorts of <span class="redstone" >guides, informational pages and project ideas</span> all in one place</p>
+			<br />
+			<p class="writing">I'm not the most knowledgeable in redstone which is why I designed this website <span class="redstone">with writers in mind</span>, you get easy writing with neat components for you to use, <br />need to supply a download? Dont use a ugly link, use the download component to make a neat looking download button <br /> <a href="/writing">view this page for more info</a></p>
 
 
 			<!--- <h2>New Pages</h2>  -> Disabled because all pages are new 😆 --->
-			<ul>
+			<!-- <ul>
 			{
 				pages.filter(page => page.frontmatter.new).slice(0, 5).map(page => <li><p><a href={page.url}>{page.frontmatter.title}</a></p> <p class="description">{page.frontmatter.description}</p></li>)
 			}	 
 			
-			</ul>
+			</ul> -->
 
 			{categories.map(category => (
 				<h2>{category}</h2>

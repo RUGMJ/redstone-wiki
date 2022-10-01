@@ -25,3 +25,7 @@ main>* {
 li {
     list-style: none;
 }
+
+.welcome {
+    font-size: 1.5rem;
+}
