@@ -164,7 +164,9 @@ ol {
 
     * {
         cursor: pointer;
-        vertical-align: bottom;
+        vertical-align: top;
+        margin-bottom: min(2%, 2vh);
+        color: var(--link-colour);
     }
 
 }
