@@ -1,13 +1,13 @@
 ---
 const { url, display_name } = Astro.props;
 import path from 'path';
-import { Icon } from 'astro-icon';
+// import { Icon } from 'astro-icon';
 ---
 
 <div class='download'>
 	<a href={url} download={display_name + path.extname(url)} target='_blank'>
 		{display_name}
-		<Icon name='charm:download' inline={true} width={25} />
+		<!-- <Icon name='charm:download' inline={true} width={25} /> -->
 	</a>
 	<span class='description'>{url}</span>
 </div>
