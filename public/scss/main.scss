@@ -40,9 +40,10 @@ body {
     footer {
         background: var(--foreground);
 
-        margin: 1%;
-        padding: 1%;
-        margin-bottom: 3%;
+        margin: max(1%, 0.5vh);
+
+        padding: max(1%, 4vw);
+        margin-bottom: max(5%, 1vh);
 
         border-radius: 10px;
 
@@ -55,12 +56,14 @@ body {
 
         min-height: 100vh; // Make the main element take up the whole page
 
-        width: 75vw;
+        // width: 75vw;
+        width: fit-content;
         align-self: center; // Centers the element on the horizontal axis
 
         * {
-            margin-block: 0.5%;
+            margin-bottom: 1.5rem;
         }
+
     }
 
     header {
@@ -78,7 +81,7 @@ body {
             }
         }
 
-        margin-bottom: 1%;
+        margin-bottom: 2vh
     }
 }
 
@@ -142,26 +145,28 @@ ol {
 
     width: fit-content;
 
-    padding: 1%;
+    padding: max(1%, 2vh);
 
     border-radius: 10px;
+    text-align: center;
 
     transition: padding var(--transition-speed) ease-in-out;
 
     &:hover {
-        padding: 1.5%;
+        padding: max(1.5%, 2.5vh);
+
     }
 
     .description {
         font-size: 0.75rem;
     }
 
-    a {
-        * {
-            cursor: pointer;
-            vertical-align: bottom;
-        }
+
+    * {
+        cursor: pointer;
+        vertical-align: bottom;
     }
+
 }
 
 .nav-search {
@@ -174,7 +179,7 @@ ol {
         background: var(--background);
         border: none;
         border-radius: 10px;
-        padding-block: 2vh;
+        padding: max(1%, 2vh);
         display: inline-block;
         text-align: center;
 
@@ -195,9 +200,9 @@ ol {
 
         .nav-search-result {
             background: var(--background);
-            padding: 3%;
+            padding: max(1.5%, 1.5vh);
             border-radius: 10px;
-            margin-bottom: 5%;
+            margin-bottom: max(5%, 1vh);
             border: var(--text-colour) 2px solid;
         }
     }
@@ -219,6 +224,10 @@ ol {
 
     .nav-search {
         margin: auto;
+
+        .nav-search-result {
+            margin: auto;
+        }
     }
 
 }
